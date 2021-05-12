@@ -55,27 +55,117 @@ function App() {
       ],
     },
     {
-      id: 3,
-      question: "Who played the character of harry potter in movie?",
+      id: 4,
+      question: "Which one of the following river flows between Vindhyan and Satpura ranges?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "Narmada",
+          correct: true,
+        },
+        {
+          text: "Mahanadi",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "Son",
           correct: false,
         },
         {
-          text: "Denzel Washington",
+          text: "Netravati",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 5,
+      question: "The Central Rice Research Station is situated in?",
+      answers: [
+        {
+          text: "Chennai",
           correct: false,
         },
         {
-          text: "Daniel Red Cliff",
+          text: "Cuttack",
+          correct: true,
+        },
+        {
+          text: "Quilon",
+          correct: false,
+        },
+        {
+          text: "Bangalore",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 6,
+      question: "Who among the following wrote Sanskrit grammar?",
+      answers: [
+        {
+          text: "Alaknanda",
+          correct: false,
+        },
+        {
+          text: "Pindar",
+          correct: false,
+        },
+        {
+          text: "Mandakini",
+          correct: false,
+        },
+        {
+          text: "Bhagirathi",
           correct: true,
         },
       ],
     },
+    {
+      id: 7,
+      question: "The metal whose salts are sensitive to light is?",
+      answers: [
+        {
+          text: "Zinc",
+          correct: false,
+        },
+        {
+          text: "Silver",
+          correct: true,
+        },
+        {
+          text: "Copper",
+          correct: false,
+        },
+        {
+          text: "Aluminum",
+          correct: false,
+        },
+      ],
+    },
+    {
+      id: 8,
+      question: "The country that has the highest in Barley Production?",
+      answers: [
+        {
+          text: "China",
+          correct: false,
+        },
+        {
+          text: "India",
+          correct: false,
+        },
+        {
+          text: "Russia",
+          correct: true,
+        },
+        {
+          text: "France",
+          correct: false,
+        },
+      ],
+    },
+
+
   ];
   const moneyPyramid = useMemo(() =>
     [
@@ -131,14 +221,12 @@ function App() {
                   <span className="moneyListItemAmount">{m.amount}</span>
                 </li>
               ))}
-
-
             </ul>
           </div>
         </>
       )
         :
-        <Start />}
+        <Start setUsername={setUsername} />}
 
     </div>
   );
